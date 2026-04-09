@@ -33,33 +33,33 @@ export default function move(gameState){
     if x = 0 || x = 10, turn up or down
     if y = 0 || y = 10, turn left or right
     should turn direction it is furthest from (Ex. if y = 0 & x = 7, snake should turn left towards x = 0) */
-    if(myHead.x == 1) {
+    if(myHead.x == 0) {
         moveSafety.left = false;
-        if(myHead.y > 6) {
+        if(myHead.y > 5) {
             moveSafety.up = false;
-        } else if(myHead.y < 6) {
+        } else if(myHead.y < 5) {
             moveSafety.down = false;
         }
-    } else if(myHead.x == 11) {
+    } else if(myHead.x == 10) {
         moveSafety.right = false;
-        if(myHead.y > 6) {
+        if(myHead.y > 5) {
             moveSafety.up = false;
-        } else if(myHead.y < 6) {
+        } else if(myHead.y < 5) {
             moveSafety.down = false;
         }
     }
-    if(myHead.y == 1) {
+    if(myHead.y == 0) {
         moveSafety.down = false;
-        if(myHead.x > 6) {
+        if(myHead.x > 5) {
             moveSafety.right = false;
-        } else if(myHead.x < 6) {
+        } else if(myHead.x < 5) {
             moveSafety.left = false;
         }
-    } else if(myHead.y == 11) {
+    } else if(myHead.y == 10) {
         moveSafety.up = false;
-        if(myHead.x > 6) {
+        if(myHead.x > 5) {
             moveSafety.right = false;
-        } else if(myHead.x < 6) {
+        } else if(myHead.x < 5) {
             moveSafety.left = false;
         }
     }
