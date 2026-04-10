@@ -16,10 +16,10 @@ const app = express();
 app.use(express.json());
 const config = {
 	apiversion: "1",
-	author: "", // TODO: Your Battlesnake Username
+	author: "GraysonL08", // TODO: Your Battlesnake Username
 	color: "#750b17", // TODO: Choose color
 	head: "replit-mark", // TODO: Choose head, see https://play.battlesnake.com/customizations/ for options unlocked in your account
-	tail: "default", // TODO: Choose tail, see https://play.battlesnake.com/customizations/ for options unlocked in your account
+	tail: "skinny", // TODO: Choose tail, see https://play.battlesnake.com/customizations/ for options unlocked in your account
 };
 
 //TODO: respond to GET requests on "/" with the config object above

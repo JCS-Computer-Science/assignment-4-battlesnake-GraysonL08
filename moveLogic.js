@@ -26,13 +26,6 @@ export default function move(gameState){
     // TODO: Step 1 - Prevent your Battlesnake from moving out of bounds
     // gameState.board contains an object representing the game board including its width and height
     // https://docs.battlesnake.com/api/objects/board
-    /* 10x10 board
-    scale 0 - 10 so 11 spaces total
-    0 bottom and left
-    10 top and right
-    if x = 0 || x = 10, turn up or down
-    if y = 0 || y = 10, turn left or right
-    should turn direction it is furthest from (Ex. if y = 0 & x = 7, snake should turn left towards x = 0) */
     if(myHead.x == 0) {
         moveSafety.left = false;
         if(myHead.y > 5) {
@@ -67,6 +60,11 @@ export default function move(gameState){
     // TODO: Step 2 - Prevent your Battlesnake from colliding with itself
     // gameState.you contains an object representing your snake, including its coordinates
     // https://docs.battlesnake.com/api/objects/battlesnake
+    /* need object with all snake coordinates
+    prevent head from being able to move into any of the body's coordinates
+    move direction opposite from body (maybe)
+    find out how to get object to track all snake coordinates even as it grows
+    get it to track when food is eaten so it knows when to grow */
     
     
     // TODO: Step 3 - Prevent your Battlesnake from colliding with other Battlesnakes
