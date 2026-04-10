@@ -28,14 +28,14 @@ export default function move(gameState){
     // https://docs.battlesnake.com/api/objects/board
     if(myHead.x == 0) {
         moveSafety.left = false;
-        if(myHead.y > 5) {
+        if(myHead.y > 4) {
             moveSafety.up = false;
         } else if(myHead.y < 5) {
             moveSafety.down = false;
         }
     } else if(myHead.x == 10) {
         moveSafety.right = false;
-        if(myHead.y > 5) {
+        if(myHead.y > 4) {
             moveSafety.up = false;
         } else if(myHead.y < 5) {
             moveSafety.down = false;
@@ -43,14 +43,14 @@ export default function move(gameState){
     }
     if(myHead.y == 0) {
         moveSafety.down = false;
-        if(myHead.x > 5) {
+        if(myHead.x > 4) {
             moveSafety.right = false;
         } else if(myHead.x < 5) {
             moveSafety.left = false;
         }
     } else if(myHead.y == 10) {
         moveSafety.up = false;
-        if(myHead.x > 5) {
+        if(myHead.x > 4) {
             moveSafety.right = false;
         } else if(myHead.x < 5) {
             moveSafety.left = false;
@@ -65,7 +65,36 @@ export default function move(gameState){
     move direction opposite from body (maybe)
     find out how to get object to track all snake coordinates even as it grows
     get it to track when food is eaten so it knows when to grow */
-    
+   /* for(let i = 0; i < length + 1; i++) {
+    if(gameState.you.body[i.x] == head.x - 1) {
+        moveSafety.left = false;
+    }
+    if(gameState.you.body[i.x] == head.x + 1) {
+        moveSafety.right = false;
+    }
+    if(gameState.you.body[i.y] == head.y - 1) {
+        moveSafety.down = false;
+    }
+    if(gameState.you.body[i.y] == head.y + 1) {
+        moveSafety.up = false;
+    }
+   } */
+  //while() {
+    for(let i = 0; i < length + 1; i++) {
+        if(gameState.you.body[i.x] == head.x - 1) {
+            moveSafety.left = false;
+        }
+        if(gameState.you.body[i.x] == head.x + 1) {
+            moveSafety.right = false;
+        }
+        if(gameState.you.body[i.y] == head.y - 1) {
+            moveSafety.down = false;
+        }
+        if(gameState.you.body[i.y] == head.y + 1) {
+            moveSafety.up = false;
+        }
+    }
+  //}
     
     // TODO: Step 3 - Prevent your Battlesnake from colliding with other Battlesnakes
     // gameState.board.snakes contains an array of enemy snake objects, which includes their coordinates
