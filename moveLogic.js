@@ -80,17 +80,17 @@ export default function move(gameState){
     }
    } */
   //while() {
-    for(let i = 0; i < length + 1; i++) {
-        if(gameState.you.body[i.x] == head.x - 1) {
+    for(let i = 0; i < gameState.you.body.length + 1; i++) {
+        if(gameState.you.body[i.x] == myHead.x - 1) {
             moveSafety.left = false;
         }
-        if(gameState.you.body[i.x] == head.x + 1) {
+        if(gameState.you.body[i.x] == myHead.x + 1) {
             moveSafety.right = false;
         }
-        if(gameState.you.body[i.y] == head.y - 1) {
+        if(gameState.you.body[i.y] == myHead.y - 1) {
             moveSafety.down = false;
         }
-        if(gameState.you.body[i.y] == head.y + 1) {
+        if(gameState.you.body[i.y] == myHead.y + 1) {
             moveSafety.up = false;
         }
     }
